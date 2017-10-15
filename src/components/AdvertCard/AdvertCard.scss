@@ -1,0 +1,50 @@
+.wtmv {
+
+  .advertcard {
+    &__container {
+      box-sizing: border-box;
+      width: calc(100% - 40px);
+      margin: 20px;
+      position: relative;
+    }
+
+    &__advert {
+      box-sizing: border-box;
+      padding: 20px;
+      float: left;
+      text-align: center;
+      width: 50%;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+
+      > * {
+        @media only screen and (min-width: 768px) {
+          float: right;
+        }
+      }
+    }
+
+    &__info {
+      box-sizing: border-box;
+      float: left;
+      padding: 20px;
+      width: 50%;
+      height: 100%;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &__middle {
+      @media only screen and (min-width: 768px) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+}

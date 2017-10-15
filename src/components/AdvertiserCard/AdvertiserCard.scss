@@ -1,0 +1,36 @@
+.wtmv {
+
+  .advertisercard {
+    &__container {
+      box-sizing: border-box;
+      background-color: #ffffff;
+      width: calc(100% - 40px);
+      margin: 20px;
+      float: left;
+      box-shadow: inset 0px 0px 5px 0px rgba(199,199,199,1);
+      padding: 20px;
+      cursor: pointer;
+      transition: 0.4s all;
+      height: 300px;
+      text-align: center;
+      color: black;
+
+      img {
+        width: 100px;
+      }
+
+      &:hover {
+        box-shadow: inset 0px 0px 20px 0px rgba(199,199,199,1);
+      }
+
+      @media only screen and (min-width: 480px) {
+        width: calc(50% - 40px);
+      }
+
+      @media only screen and (min-width: 768px) {
+        width: calc(33% - 40px);
+      }
+    }
+  }
+
+}

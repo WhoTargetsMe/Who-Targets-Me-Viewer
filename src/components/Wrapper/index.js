@@ -1,23 +1,34 @@
 import React, { Component } from 'react';
+import './Wrapper.scss';
+import FacebookProvider from 'react-facebook';
 
 import {
   BrowserRouter as Router,
   Route,
-  Link,
 } from 'react-router-dom';
 
-import Home from 'components/Home';
+import Home from '../Home';
+import Advertiser from '../Advertiser';
 
 export default class Wrapper extends Component {
   render() {
     return (
-      <p></p>
+      <div className="wtmv">
+        <div className="main">
+          <FacebookProvider appId="1969644276620014">
+            <RouterLogic />
+          </FacebookProvider>
+        </div>
+      </div>
     );
   }
 }
 
-const routes = () => (
+const RouterLogic = () => (
   <Router>
-    <Route exact path="/" component={Home}/>
+    <span>
+      <Route exact path="/:lang/viewer" component={Home}/>
+      <Route exact path="/:lang/viewer/:advertiserSlug/:advertiserId" component={Advertiser}/>
+    </span>
   </Router>
 )
